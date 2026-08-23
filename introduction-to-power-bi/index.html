@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Growth Strategy Vision Board</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: { 850: '#1e293b' },
+                        electric: '#3b82f6',
+                        sunset: '#f97316',
+                        emerald: '#10b981',
+                        royal: '#8b5cf6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 min-h-screen selection:bg-electric selection:text-white font-sans antialiased">
+
+    <!-- Header Section -->
+    <header class="py-16 px-6 text-center max-w-4xl mx-auto">
+        <h1 class="font-display text-5xl md:text-7xl font-black mb-6 text-white tracking-tight">
+            Vision for <span class="gradient-text">Power BI Growth</span>
+        </h1>
+        <p class="text-xl text-slate-400 font-light">A strategic roadmap for scaling data literacy and professional transformation.</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <!-- Vision Board Bento Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <!-- Card 1 -->
+            <div class="glass p-6 rounded-3xl card-hover">
+                <img src='https://opal.google/board/blobs/41364909-9e59-4f7e-b5c8-15df87f42441' alt='5-Day Power BI Email Challenge' class="w-full h-48 object-cover rounded-2xl mb-6">
+                <h3 class="font-display text-2xl font-bold mb-3 text-white">5-Day Email Challenge</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">A high-conversion funnel designed to build trust through immediate value, culminating in a finished project by day 5.</p>
+                <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-blue-900/30 text-electric text-xs font-semibold rounded-full border border-electric/20">Content Marketing</span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass p-6 rounded-3xl card-hover">
+                <img src='https://opal.google/board/blobs/031527cc-a12d-4399-a351-aefc82e922f4' alt='LinkedIn Before & After' class="w-full h-48 object-cover rounded-2xl mb-6">
+                <h3 class="font-display text-2xl font-bold mb-3 text-white">LinkedIn "Before & After"</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Visually demonstrate the immediate impact of data transformation on a professional platform where the target audience resides.</p>
+                <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-emerald-900/30 text-emerald-400 text-xs font-semibold rounded-full border border-emerald/20">Social Media</span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass p-6 rounded-3xl card-hover">
+                <img src='https://opal.google/board/blobs/72b388f6-24fc-468a-b8b0-14b640b5f7f5' alt='Career Coach Collaboration' class="w-full h-48 object-cover rounded-2xl mb-6">
+                <h3 class="font-display text-2xl font-bold mb-3 text-white">Career Coach Partnering</h3>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Leverage expert endorsements to reach a "warm" audience of motivated job seekers looking to upskill in the future of work.</p>
+                <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-purple-900/30 text-royal text-xs font-semibold rounded-full border border-royal/20">Partnerships</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Primary Actionable Checklist -->
+        <section class="glass p-8 md:p-12 rounded-3xl">
+            <h2 class="font-display text-4xl font-bold mb-10 text-white">Primary Action Plan</h2>
+            <div class="space-y-6">
+                <div class="flex items-start gap-6 border-b border-white/5 pb-6">
+                    <div class="w-12 h-12 flex-shrink-0 bg-electric flex items-center justify-center rounded-2xl font-bold text-white text-xl">01</div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Build the Lead Magnet</h4>
+                        <p class="text-slate-400 italic">Launch the "5-Day Power BI Email Challenge" to capture leads and showcase teaching style immediately.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start gap-6 border-b border-white/5 pb-6">
+                    <div class="w-12 h-12 flex-shrink-0 bg-emerald-500 flex items-center justify-center rounded-2xl font-bold text-white text-xl">02</div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Optimize LinkedIn Presence</h4>
+                        <p class="text-slate-400 italic">Deploy weekly "Before & After" carousels to drive traffic from professional networks directly to the lead magnet.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-6">
+                    <div class="w-12 h-12 flex-shrink-0 bg-royal flex items-center justify-center rounded-2xl font-bold text-white text-xl">03</div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Initiate Strategic Outreach</h4>
+                        <p class="text-slate-400 italic">Contact 15 career coaches to secure collaborative promotions or affiliate partnerships within the next 30 days.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
