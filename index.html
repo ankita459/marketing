@@ -1,9 +1,12 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Digital Products | Ankita</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -12,186 +15,379 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: #f5f9ff;
       color: #1a1a1a;
+      line-height: 1.6;
     }
+
+    /* =========================
+       HEADER
+    ========================== */
 
     header {
       background: #1565C0;
       color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
 
     header h1 {
-      font-size: 42px;
-      margin-bottom: 12px;
+      font-size: 44px;
+      margin-bottom: 15px;
     }
 
     header p {
       font-size: 18px;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.6;
+      max-width: 750px;
+      margin: 0 auto;
+      line-height: 1.7;
     }
 
+    /* =========================
+       MAIN CONTAINER
+    ========================== */
+
     .container {
-      max-width: 1100px;
-      margin: 50px auto;
-      padding: 0 20px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 30px;
     }
+
+    /* =========================
+       SECTION TITLE
+    ========================== */
 
     .section-title {
       text-align: center;
-      margin-bottom: 35px;
+      margin-bottom: 45px;
     }
 
     .section-title h2 {
-      font-size: 30px;
+      font-size: 32px;
       color: #1565C0;
       margin-bottom: 10px;
     }
 
     .section-title p {
       color: #666;
+      font-size: 16px;
     }
+
+    /* =========================
+       PRODUCTS GRID
+    ========================== */
 
     .products {
       display: grid;
+
+      /* 3 cards per row */
       grid-template-columns: repeat(3, 1fr);
+
+      /* SPACE BETWEEN CARDS */
       column-gap: 50px;
       row-gap: 50px;
     }
 
+    /* =========================
+       PRODUCT CARD
+    ========================== */
+
     .card {
       background: white;
-      border-radius: 15px;
-      padding: 30px;
-      margin: 0;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: transform 0.2s;
+      border-radius: 18px;
+
+      padding: 35px;
+
+      min-height: 360px;
+
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+      display: flex;
+      flex-direction: column;
+
+      transition: transform 0.25s ease,
+                  box-shadow 0.25s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
+
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
     }
 
-    .card .icon {
-      font-size: 45px;
-      margin-bottom: 15px;
-    }
+    /* =========================
+       ICON
+    ========================== */
 
-    .card h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .card p {
-      color: #666;
-      line-height: 1.6;
+    .icon {
+      font-size: 50px;
       margin-bottom: 20px;
     }
 
+    /* =========================
+       CARD TITLE
+    ========================== */
+
+    .card h3 {
+      font-size: 23px;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+    }
+
+    /* =========================
+       CARD DESCRIPTION
+    ========================== */
+
+    .card p {
+      color: #666;
+      font-size: 15px;
+      line-height: 1.7;
+
+      margin-bottom: 25px;
+
+      flex-grow: 1;
+    }
+
+    /* =========================
+       BUTTON
+    ========================== */
+
     .button {
       display: inline-block;
+
       background: #1565C0;
       color: white;
+
       text-decoration: none;
-      padding: 12px 22px;
+
+      padding: 13px 24px;
+
       border-radius: 8px;
+
       font-weight: bold;
+      text-align: center;
+
+      transition: background 0.2s ease;
     }
 
     .button:hover {
       background: #0d47a1;
     }
 
+    /* =========================
+       FOOTER
+    ========================== */
+
     footer {
       text-align: center;
+
       background: #0d47a1;
       color: white;
-      padding: 25px;
-      margin-top: 60px;
+
+      padding: 30px 20px;
+
+      margin-top: 80px;
+
+      font-size: 14px;
     }
 
-    @media (max-width: 900px) {
+    /* =========================
+       TABLET
+    ========================== */
+
+    @media (max-width: 1000px) {
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+
+        column-gap: 35px;
+        row-gap: 35px;
+      }
+
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 650px) {
+
+      header {
+        padding: 50px 20px;
+      }
+
+      header h1 {
+        font-size: 32px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+
+      .container {
+        margin: 45px auto;
+        padding: 0 20px;
+      }
+
+      .section-title h2 {
+        font-size: 27px;
+      }
+
       .products {
         grid-template-columns: 1fr;
+
         gap: 30px;
       }
+
+      .card {
+        padding: 28px;
+        min-height: auto;
+      }
+
     }
+
   </style>
 </head>
 
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header>
+
     <h1>🚀 Digital Products</h1>
+
     <p>
       Practical AI, technology, productivity and analytics resources
       designed to help you learn faster and work smarter.
     </p>
+
   </header>
+
+
+  <!-- =========================
+       PRODUCTS
+  ========================== -->
 
   <main class="container">
 
     <div class="section-title">
+
       <h2>Our Products</h2>
-      <p>Explore our collection of practical digital resources.</p>
+
+      <p>
+        Explore our collection of practical digital learning resources.
+      </p>
+
     </div>
+
 
     <div class="products">
 
+
+      <!-- PRODUCT 1 -->
+
       <div class="card">
-        <div class="icon">🤖</div>
-        <h3>AI Productivity Toolkit</h3>
+
+        <div class="icon">
+          🤖
+        </div>
+
+        <h3>
+          AI Productivity Toolkit
+        </h3>
+
         <p>
           A practical collection of AI tools, prompts, workflows and
-          resources to help students, professionals, creators and
-          small businesses save time and work smarter.
+          resources designed to help students, professionals, creators
+          and small businesses save time and work smarter.
         </p>
-        <a class="button"
-           href="ai-productivity-toolkit/">
+
+        <a
+          class="button"
+          href="ai-productivity-toolkit/"
+        >
           View Product
         </a>
+
       </div>
+
+
+      <!-- PRODUCT 2 -->
+
+      <div class="card">
+
+        <div class="icon">
+          📊
+        </div>
+
+        <h3>
+          Introduction to Power BI
+        </h3>
+
+        <p>
+          A beginner-friendly learning resource covering Power BI
+          fundamentals, data import, data transformation, relationships,
+          visualizations and practical business intelligence concepts.
+        </p>
+
+        <a
+          class="button"
+          href="introduction-to-power-bi/"
+        >
+          View Product
+        </a>
+
+      </div>
+
+
+      <!-- PRODUCT 3 -->
+
+      <div class="card">
+
+        <div class="icon">
+          📈
+        </div>
+
+        <h3>
+          Advanced Excel with AI
+        </h3>
+
+        <p>
+          A practical learning resource covering advanced Excel formulas,
+          data analysis, dashboards, automation, AI-assisted workflows
+          and real-world business use cases.
+        </p>
+
+        <a
+          class="button"
+          href="advanced-excel-with-ai/"
+        >
+          View Product
+        </a>
+
+      </div>
+
 
     </div>
 
-    <div class="card">
-  <div class="icon">📊</div>
-  <h3>Introduction to Power BI</h3>
-  <p>
-    A beginner-friendly learning resource covering Power BI fundamentals,
-    data import, transformation, relationships, visualizations and
-    practical business intelligence concepts.
-  </p>
-  <a class="button"
-     href="introduction-to-power-bi/">
-    View Product
-  </a>
-</div>
-
-    <div class="card">
-  <div class="icon">📈</div>
-  <h3>Advanced Excel with AI</h3>
-  <p>
-    A practical learning resource covering advanced Excel formulas,
-    data analysis, dashboards, automation, AI-assisted workflows,
-    and real-world business use cases.
-  </p>
-  <a class="button"
-     href="advanced-excel-with-ai/">
-    View Product
-  </a>
-</div>
-
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
-    © 2026 Ankita | Digital Learning & Productivity Resources
+
+    © 2026 Ankitaa Panpatil | Digital Learning & Productivity Resources
+
   </footer>
+
 
 </body>
 </html>
+```
