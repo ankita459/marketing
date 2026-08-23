@@ -8,6 +8,7 @@
   <title>Digital Products | Ankita</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -18,45 +19,39 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #f5f9ff;
       color: #1a1a1a;
-      line-height: 1.6;
     }
 
-    /* =========================
-       HEADER
-    ========================== */
+    /* HEADER */
 
     header {
       background: #1565C0;
       color: white;
       text-align: center;
-      padding: 70px 20px;
+      padding: 65px 20px;
     }
 
     header h1 {
-      font-size: 44px;
+      font-size: 42px;
       margin-bottom: 15px;
     }
 
     header p {
+      max-width: 720px;
+      margin: auto;
       font-size: 18px;
-      max-width: 750px;
-      margin: 0 auto;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
-    /* =========================
-       MAIN CONTAINER
-    ========================== */
+    /* MAIN */
 
     .container {
+      width: 100%;
       max-width: 1200px;
       margin: 60px auto;
       padding: 0 30px;
     }
 
-    /* =========================
-       SECTION TITLE
-    ========================== */
+    /* SECTION TITLE */
 
     .section-title {
       text-align: center;
@@ -64,8 +59,8 @@
     }
 
     .section-title h2 {
-      font-size: 32px;
       color: #1565C0;
+      font-size: 32px;
       margin-bottom: 10px;
     }
 
@@ -74,74 +69,75 @@
       font-size: 16px;
     }
 
-    /* =========================
-       PRODUCTS GRID
-    ========================== */
+    /* PRODUCT GRID */
 
     .products {
       display: grid;
 
-      /* 3 cards per row */
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
 
-      /* SPACE BETWEEN CARDS */
-      column-gap: 50px;
-      row-gap: 50px;
+      column-gap: 40px;
+      row-gap: 40px;
+
+      align-items: stretch;
     }
 
-    /* =========================
-       PRODUCT CARD
-    ========================== */
+    /* CARD */
 
     .card {
-      background: white;
+      background: #ffffff;
+
       border-radius: 18px;
 
-      padding: 35px;
+      padding: 30px;
 
-      min-height: 360px;
-
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      min-height: 390px;
 
       display: flex;
       flex-direction: column;
 
-      transition: transform 0.25s ease,
-                  box-shadow 0.25s ease;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+
+      border: 1px solid #e5eaf0;
+
+      transition: all 0.25s ease;
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-6px);
 
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
     }
 
-    /* =========================
-       ICON
-    ========================== */
+    /* ICON */
 
     .icon {
-      font-size: 50px;
+      font-size: 48px;
       margin-bottom: 20px;
+      height: 60px;
+
+      display: flex;
+      align-items: center;
     }
 
-    /* =========================
-       CARD TITLE
-    ========================== */
+    /* TITLE */
 
     .card h3 {
-      font-size: 23px;
-      margin-bottom: 15px;
+      font-size: 22px;
       color: #1a1a1a;
+
+      margin-bottom: 15px;
+
+      min-height: 52px;
     }
 
-    /* =========================
-       CARD DESCRIPTION
-    ========================== */
+    /* DESCRIPTION */
 
     .card p {
       color: #666;
+
       font-size: 15px;
+
       line-height: 1.7;
 
       margin-bottom: 25px;
@@ -149,24 +145,28 @@
       flex-grow: 1;
     }
 
-    /* =========================
-       BUTTON
-    ========================== */
+    /* BUTTON */
 
     .button {
-      display: inline-block;
+      display: block;
+
+      width: 100%;
 
       background: #1565C0;
+
       color: white;
 
       text-decoration: none;
 
-      padding: 13px 24px;
+      padding: 13px 20px;
 
       border-radius: 8px;
 
-      font-weight: bold;
       text-align: center;
+
+      font-weight: bold;
+
+      margin-top: auto;
 
       transition: background 0.2s ease;
     }
@@ -175,15 +175,14 @@
       background: #0d47a1;
     }
 
-    /* =========================
-       FOOTER
-    ========================== */
+    /* FOOTER */
 
     footer {
-      text-align: center;
-
       background: #0d47a1;
+
       color: white;
+
+      text-align: center;
 
       padding: 30px 20px;
 
@@ -192,24 +191,20 @@
       font-size: 14px;
     }
 
-    /* =========================
-       TABLET
-    ========================== */
+    /* TABLET */
 
     @media (max-width: 1000px) {
 
       .products {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
 
-        column-gap: 35px;
-        row-gap: 35px;
+        column-gap: 30px;
+        row-gap: 30px;
       }
 
     }
 
-    /* =========================
-       MOBILE
-    ========================== */
+    /* MOBILE */
 
     @media (max-width: 650px) {
 
@@ -226,23 +221,25 @@
       }
 
       .container {
-        margin: 45px auto;
         padding: 0 20px;
+
+        margin: 45px auto;
       }
 
       .section-title h2 {
-        font-size: 27px;
+        font-size: 28px;
       }
 
       .products {
         grid-template-columns: 1fr;
 
-        gap: 30px;
+        gap: 25px;
       }
 
       .card {
+        min-height: 350px;
+
         padding: 28px;
-        min-height: auto;
       }
 
     }
@@ -252,9 +249,8 @@
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
+
+  <!-- HEADER -->
 
   <header>
 
@@ -268,9 +264,7 @@
   </header>
 
 
-  <!-- =========================
-       PRODUCTS
-  ========================== -->
+  <!-- PRODUCTS -->
 
   <main class="container">
 
@@ -292,13 +286,9 @@
 
       <div class="card">
 
-        <div class="icon">
-          🤖
-        </div>
+        <div class="icon">🤖</div>
 
-        <h3>
-          AI Productivity Toolkit
-        </h3>
+        <h3>AI Productivity Toolkit</h3>
 
         <p>
           A practical collection of AI tools, prompts, workflows and
@@ -320,13 +310,9 @@
 
       <div class="card">
 
-        <div class="icon">
-          📊
-        </div>
+        <div class="icon">📊</div>
 
-        <h3>
-          Introduction to Power BI
-        </h3>
+        <h3>Introduction to Power BI</h3>
 
         <p>
           A beginner-friendly learning resource covering Power BI
@@ -348,13 +334,9 @@
 
       <div class="card">
 
-        <div class="icon">
-          📈
-        </div>
+        <div class="icon">📈</div>
 
-        <h3>
-          Advanced Excel with AI
-        </h3>
+        <h3>Advanced Excel with AI</h3>
 
         <p>
           A practical learning resource covering advanced Excel formulas,
@@ -372,40 +354,61 @@
       </div>
 
 
+      <!-- PRODUCT 4 -->
+
+      <div class="card">
+
+        <div class="icon">🗄️</div>
+
+        <h3>SQL for Beginners</h3>
+
+        <p>
+          A practical learning resource designed for beginners who want
+          to learn SQL from scratch, including queries, filtering,
+          sorting, grouping, aggregate functions, joins and practical
+          business examples.
+        </p>
+
+        <a
+          class="button"
+          href="sql-for-beginners/"
+        >
+          View Product
+        </a>
+
+      </div>
+
+
+      <!-- PRODUCT 5 -->
+
+      <div class="card">
+
+        <div class="icon">📉</div>
+
+        <h3>Tableau for Beginners</h3>
+
+        <p>
+          A practical learning resource covering Tableau fundamentals,
+          data connections, worksheets, charts, dashboards, filters,
+          calculated fields and interactive data visualizations.
+        </p>
+
+        <a
+          class="button"
+          href="tableau-for-beginners/"
+        >
+          View Product
+        </a>
+
+      </div>
+
+
     </div>
-
-    <div class="card">
-
-  <div class="icon">
-    🗄️
-  </div>
-
-  <h3>
-    SQL for Beginners
-  </h3>
-
-  <p>
-    A practical learning resource designed for beginners who want
-    to learn SQL from scratch, including queries, filtering,
-    sorting, grouping, aggregate functions, joins and practical
-    business examples.
-  </p>
-
-  <a
-    class="button"
-    href="sql-for-beginners/"
-  >
-    View Product
-  </a>
-
-</div>
 
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
 
   <footer>
 
