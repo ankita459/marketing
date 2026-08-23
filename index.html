@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Digital Products | Ankita</title>
+  <title>Ankita | Digital Learning & AI Resources</title>
 
   <style>
 
@@ -15,43 +15,117 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f5f9ff;
       color: #1a1a1a;
-    }
-
-    /* HEADER */
-
-    header {
-      background: #1565C0;
-      color: white;
-      text-align: center;
-      padding: 65px 20px;
-    }
-
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    header p {
-      max-width: 720px;
-      margin: auto;
-      font-size: 18px;
       line-height: 1.6;
     }
 
-    /* MAIN */
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid #e5eaf0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 30px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #1565C0;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #1565C0;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      background: linear-gradient(135deg, #1565C0, #0d47a1);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+
+      background: white;
+      color: #1565C0;
+
+      text-decoration: none;
+      border-radius: 8px;
+
+      font-weight: bold;
+    }
+
+    .hero-button:hover {
+      background: #f0f4f8;
+    }
+
+    /* =========================
+       GENERAL CONTAINER
+    ========================== */
 
     .container {
       width: 100%;
       max-width: 1200px;
-      margin: 60px auto;
-      padding: 0 30px;
+      margin: 0 auto;
+      padding: 70px 30px;
     }
 
-    /* SECTION TITLE */
+    /* =========================
+       SECTION TITLE
+    ========================== */
 
     .section-title {
       text-align: center;
@@ -60,7 +134,7 @@
 
     .section-title h2 {
       color: #1565C0;
-      font-size: 32px;
+      font-size: 34px;
       margin-bottom: 10px;
     }
 
@@ -69,75 +143,88 @@
       font-size: 16px;
     }
 
-    /* PRODUCT GRID */
+    /* =========================
+       PRODUCTS
+    ========================== */
 
     .products {
       display: grid;
+
       grid-template-columns: repeat(3, minmax(0, 1fr));
+
       column-gap: 40px;
       row-gap: 40px;
+
       align-items: stretch;
     }
 
-    /* CARD */
+    /* =========================
+       CARD
+    ========================== */
 
     .card {
       background: #ffffff;
+
       border-radius: 18px;
+
       padding: 30px;
+
       min-height: 390px;
 
       display: flex;
       flex-direction: column;
 
-      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
       border: 1px solid #e5eaf0;
+
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
 
       transition: all 0.25s ease;
     }
 
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-    }
 
-    /* ICON */
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+    }
 
     .icon {
       font-size: 48px;
-      margin-bottom: 20px;
+
       height: 60px;
 
       display: flex;
       align-items: center;
-    }
 
-    /* TITLE */
+      margin-bottom: 20px;
+    }
 
     .card h3 {
       font-size: 22px;
-      color: #1a1a1a;
+
       margin-bottom: 15px;
+
       min-height: 52px;
     }
 
-    /* DESCRIPTION */
-
     .card p {
       color: #666;
+
       font-size: 15px;
+
       line-height: 1.7;
+
       margin-bottom: 25px;
+
       flex-grow: 1;
     }
 
-    /* BUTTON */
-
     .button {
       display: block;
+
       width: 100%;
 
       background: #1565C0;
+
       color: white;
 
       text-decoration: none;
@@ -147,62 +234,158 @@
       border-radius: 8px;
 
       text-align: center;
+
       font-weight: bold;
 
       margin-top: auto;
-
-      transition: background 0.2s ease;
     }
 
     .button:hover {
       background: #0d47a1;
     }
 
-    /* FOOTER */
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: white;
+    }
+
+    .about-content {
+      max-width: 850px;
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .about-content p {
+      color: #555;
+
+      font-size: 17px;
+
+      line-height: 1.8;
+
+      margin-bottom: 18px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact-box {
+      max-width: 700px;
+
+      margin: auto;
+
+      background: white;
+
+      padding: 40px;
+
+      border-radius: 18px;
+
+      text-align: center;
+
+      border: 1px solid #e5eaf0;
+
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+    }
+
+    .contact-box p {
+      color: #666;
+
+      margin-bottom: 20px;
+    }
+
+    .contact-button {
+      display: inline-block;
+
+      background: #1565C0;
+
+      color: white;
+
+      text-decoration: none;
+
+      padding: 13px 25px;
+
+      border-radius: 8px;
+
+      font-weight: bold;
+    }
+
+    .contact-button:hover {
+      background: #0d47a1;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
 
     footer {
       background: #0d47a1;
+
       color: white;
+
       text-align: center;
 
-      padding: 30px 20px;
-
-      margin-top: 80px;
+      padding: 35px 20px;
 
       font-size: 14px;
     }
 
-    /* TABLET */
+    footer p {
+      margin-bottom: 8px;
+    }
+
+    /* =========================
+       TABLET
+    ========================== */
 
     @media (max-width: 1000px) {
 
       .products {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
         column-gap: 30px;
         row-gap: 30px;
       }
 
     }
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================== */
 
     @media (max-width: 650px) {
 
-      header {
-        padding: 50px 20px;
+      .nav-container {
+        flex-direction: column;
+
+        gap: 15px;
       }
 
-      header h1 {
-        font-size: 32px;
+      .nav-links {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
       }
 
-      header p {
+      .hero {
+        padding: 65px 20px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
         font-size: 16px;
       }
 
       .container {
-        padding: 0 20px;
-        margin: 45px auto;
+        padding: 55px 20px;
       }
 
       .section-title h2 {
@@ -211,12 +394,18 @@
 
       .products {
         grid-template-columns: 1fr;
+
         gap: 25px;
       }
 
       .card {
         min-height: 350px;
+
         padding: 28px;
+      }
+
+      .contact-box {
+        padding: 30px 20px;
       }
 
     }
@@ -224,172 +413,345 @@
   </style>
 </head>
 
+
 <body>
 
 
-  <!-- HEADER -->
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
 
-  <header>
+  <nav>
 
-    <h1>🚀 Digital Products</h1>
+    <div class="nav-container">
+
+      <a href="#" class="logo">
+        Ankita
+      </a>
+
+      <ul class="nav-links">
+
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#products">Products</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero" id="home">
+
+    <h1>
+      Learn Smarter. Work Better. 🚀
+    </h1>
 
     <p>
       Practical AI, technology, productivity and analytics resources
-      designed to help you learn faster and work smarter.
+      designed to help students, professionals and aspiring analysts
+      build useful skills and work more efficiently.
     </p>
 
-  </header>
+    <a
+      href="#products"
+      class="hero-button"
+    >
+      Explore Products
+    </a>
+
+  </section>
 
 
-  <!-- PRODUCTS -->
+  <!-- =========================
+       PRODUCTS
+  ========================== -->
 
-  <main class="container">
+  <section id="products">
 
-    <div class="section-title">
+    <main class="container">
 
-      <h2>Our Products</h2>
+      <div class="section-title">
 
-      <p>
-        Explore our collection of practical digital learning resources.
-      </p>
+        <h2>
+          Our Products
+        </h2>
+
+        <p>
+          Explore practical digital learning resources.
+        </p>
+
+      </div>
+
+
+      <div class="products">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="card">
+
+          <div class="icon">
+            🤖
+          </div>
+
+          <h3>
+            AI Productivity Toolkit
+          </h3>
+
+          <p>
+            A practical collection of AI tools, prompts, workflows
+            and resources designed to help students, professionals,
+            creators and small businesses save time and work smarter.
+          </p>
+
+          <a
+            class="button"
+            href="ai-productivity-toolkit/"
+          >
+            View Product
+          </a>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="card">
+
+          <div class="icon">
+            📊
+          </div>
+
+          <h3>
+            Introduction to Power BI
+          </h3>
+
+          <p>
+            A beginner-friendly learning resource covering Power BI
+            fundamentals, data import, data transformation,
+            relationships, visualizations and practical business
+            intelligence concepts.
+          </p>
+
+          <a
+            class="button"
+            href="introduction-to-power-bi/"
+          >
+            View Product
+          </a>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="card">
+
+          <div class="icon">
+            📈
+          </div>
+
+          <h3>
+            Advanced Excel with AI
+          </h3>
+
+          <p>
+            A practical learning resource covering advanced Excel
+            formulas, data analysis, dashboards, automation,
+            AI-assisted workflows and real-world business use cases.
+          </p>
+
+          <a
+            class="button"
+            href="advanced-excel-with-ai/"
+          >
+            View Product
+          </a>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="card">
+
+          <div class="icon">
+            🗄️
+          </div>
+
+          <h3>
+            SQL for Beginners
+          </h3>
+
+          <p>
+            A practical learning resource designed for beginners
+            who want to learn SQL from scratch, including queries,
+            filtering, sorting, grouping, aggregate functions,
+            joins and practical business examples.
+          </p>
+
+          <a
+            class="button"
+            href="sql-for-beginners/"
+          >
+            View Product
+          </a>
+
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="card">
+
+          <div class="icon">
+            📉
+          </div>
+
+          <h3>
+            Tableau for Beginners
+          </h3>
+
+          <p>
+            A practical learning resource covering Tableau
+            fundamentals, data connections, worksheets, charts,
+            dashboards, filters, calculated fields and interactive
+            data visualizations.
+          </p>
+
+          <a
+            class="button"
+            href="tableau-for-beginners/"
+          >
+            View Product
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </main>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section
+    class="about"
+    id="about"
+  >
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          About
+        </h2>
+
+      </div>
+
+      <div class="about-content">
+
+        <p>
+          Welcome! This platform brings together practical digital
+          learning resources focused on artificial intelligence,
+          data analytics, business intelligence, productivity and
+          technology.
+        </p>
+
+        <p>
+          The goal is simple: make useful technology skills easier
+          to understand and apply through beginner-friendly,
+          practical resources.
+        </p>
+
+      </div>
 
     </div>
 
+  </section>
 
-    <div class="products">
 
+  <!-- =========================
+       CONTACT
+  ========================== -->
 
-      <!-- PRODUCT 1 -->
+  <section
+    id="contact"
+  >
 
-      <div class="card">
+    <div class="container">
 
-        <div class="icon">🤖</div>
+      <div class="section-title">
 
-        <h3>AI Productivity Toolkit</h3>
+        <h2>
+          Get in Touch
+        </h2>
 
         <p>
-          A practical collection of AI tools, prompts, workflows and
-          resources designed to help students, professionals, creators
-          and small businesses save time and work smarter.
+          Have a question or suggestion?
         </p>
-
-        <a
-          class="button"
-          href="ai-productivity-toolkit/"
-        >
-          View Product
-        </a>
 
       </div>
 
 
-      <!-- PRODUCT 2 -->
-
-      <div class="card">
-
-        <div class="icon">📊</div>
-
-        <h3>Introduction to Power BI</h3>
+      <div class="contact-box">
 
         <p>
-          A beginner-friendly learning resource covering Power BI
-          fundamentals, data import, data transformation, relationships,
-          visualizations and practical business intelligence concepts.
+          For questions, feedback or collaboration opportunities,
+          feel free to get in touch.
         </p>
 
         <a
-          class="button"
-          href="introduction-to-power-bi/"
+          class="contact-button"
+          href="mailto:your-email@example.com"
         >
-          View Product
+          Contact Me
         </a>
 
       </div>
-
-
-      <!-- PRODUCT 3 -->
-
-      <div class="card">
-
-        <div class="icon">📈</div>
-
-        <h3>Advanced Excel with AI</h3>
-
-        <p>
-          A practical learning resource covering advanced Excel formulas,
-          data analysis, dashboards, automation, AI-assisted workflows
-          and real-world business use cases.
-        </p>
-
-        <a
-          class="button"
-          href="advanced-excel-with-ai/"
-        >
-          View Product
-        </a>
-
-      </div>
-
-
-      <!-- PRODUCT 4 -->
-
-      <div class="card">
-
-        <div class="icon">🗄️</div>
-
-        <h3>SQL for Beginners</h3>
-
-        <p>
-          A practical learning resource designed for beginners who want
-          to learn SQL from scratch, including queries, filtering,
-          sorting, grouping, aggregate functions, joins and practical
-          business examples.
-        </p>
-
-        <a
-          class="button"
-          href="sql-for-beginners/"
-        >
-          View Product
-        </a>
-
-      </div>
-
-
-      <!-- PRODUCT 5 -->
-
-      <div class="card">
-
-        <div class="icon">📉</div>
-
-        <h3>Tableau for Beginners</h3>
-
-        <p>
-          A practical learning resource covering Tableau fundamentals,
-          data connections, worksheets, charts, dashboards, filters,
-          calculated fields and interactive data visualizations.
-        </p>
-
-        <a
-          class="button"
-          href="tableau-for-beginners/"
-        >
-          View Product
-        </a>
-
-      </div>
-
 
     </div>
 
-  </main>
+  </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
-    © 2026 Ankitaa Panpatil | Digital Learning & Productivity Resources
+    <p>
+      © 2026 Ankitaa Panpatil
+    </p>
+
+    <p>
+      Digital Learning & Productivity Resources
+    </p>
 
   </footer>
 
